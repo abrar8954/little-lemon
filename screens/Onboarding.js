@@ -88,7 +88,7 @@ const Onboarding = () => {
                         onPress={() => {
                             // console.warn("Hi there")
                             multiSet();
-                            navigation.navigate('Profile');
+                            navigation.navigate('Home');
                         }} disabled={disability ? false : true}>
                         <Text style={{ fontSize: 25, color: '#314551', }}>Next</Text>
                     </TouchableOpacity>

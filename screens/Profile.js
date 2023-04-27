@@ -5,7 +5,7 @@ import CheckBox from 'react-native-check-box'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaskedTextInput } from "react-native-mask-text";
 import { useNavigation } from '@react-navigation/native';
-import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
+import { launchImageLibrary } from 'react-native-image-picker';
 
 const Profile = () => {
   const [isChecked, setIsChecked] = useState([false, false, false, false]);

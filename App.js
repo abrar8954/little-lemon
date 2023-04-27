@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Profile from './screens/Profile';
 import SplashScreen from './screens/SplashScreen';
+import Home from './screens/Home';
+import Search from './screens/Search';
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -39,16 +41,26 @@ function App() {
       <SplashScreen />
     )
   }
+
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {loggedIn[0][1] ?
-          <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} data={loggedIn}/>
-          :
+        {loggedIn[0][1] ? (
+          <>
+            <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+            <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+            <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
+            <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
+          </>
+
+        ) :
           (
             <>
               <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
+              <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
               <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+              <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
             </>
           )
 
