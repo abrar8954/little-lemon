@@ -78,10 +78,10 @@ const Onboarding = () => {
                     <Text style={{ fontSize: 25, color: '#314551' }}>Let us get to know you</Text>
                     <Text style={{ fontSize: 25, marginTop: 90, color: '#314551' }}>First Name</Text>
                     <TextInput style={{ borderWidth: 1, borderColor: '#455968', width: '70%', borderRadius: 10, height: 55, marginTop: 15, paddingLeft: 10 }} onChangeText={(txt) => ftNmeValid(txt)} placeholder='Enter First Name' placeholderTextColor={'#314551'} />
-                    {errFirstNme == 'true' ? <Text style={{ fontSize: 16, marginTop: 3, color: 'red' }}>First name must contain alphabets..</Text> : null}
+                    {errFirstNme == 'true' ? <Text style={{ fontSize: 16, marginTop: 3, color: 'red' }}>Name must contain alphabets..</Text> : null}
                     <Text style={{ fontSize: 25, marginTop: 15, color: '#314551' }}>Email</Text>
                     <TextInput style={{ borderWidth: 1, borderColor: '#455968', width: '70%', borderRadius: 10, height: 55, marginTop: 15, marginBottom: errEmail == 'true' ? 3 : 45, paddingLeft: 10 }} placeholder='Enter Email' placeholderTextColor={'#314551'} onChangeText={(txt) => emailValid(txt)} />
-                    {errEmail == 'true' ? <Text style={{ fontSize: 16, marginBottom: errEmail == 'true' ? 45 : null, color: 'red' }}>First name must contain alphabets..</Text> : null}
+                    {errEmail == 'true' ? <Text style={{ fontSize: 16, marginBottom: errEmail == 'true' ? 45 : null, color: 'red' }}>Email not correct..</Text> : null}
                 </View>
                 <View style={{ flex: 0.25, backgroundColor: '#F1F4F7', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
                     <TouchableOpacity style={{ backgroundColor: '#CBD2D9', paddingVertical: 10, width: 120, alignItems: 'center', justifyContent: 'center', marginBottom: 35, marginRight: 30, borderRadius: 10 }}
